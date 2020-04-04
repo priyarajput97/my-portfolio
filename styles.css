@@ -1,0 +1,79 @@
+body {
+    all: unset;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+/*navbar css begins*/
+
+.navbar {
+    height: 60px;
+    position: absolute;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+/*navbar css ends*/
+
+/*profile css begins*/
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #154e48;
+    color: white;
+    height: calc(100vh - 60px);
+}
+
+.profile-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+/*profile css ends*/
+
+/*footer css begins*/
+
+.footer {
+    height: 50vh;
+    background-color: #352e2e;
+    color: #737373;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left-column-element {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.contact-icon {
+    min-width: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.divider {
+    height: 70px;
+    border-left: 1px solid #737373;
+}
+
+.connects-header {
+    margin-bottom: 10px;
+}
+
+.connects > a {
+    color: #737373;
+    margin: 5px;
+    transition: color .3s linear;
+}
+
+.connects > a:hover {
+    color: #154e48;
+}
+
+/*footer css ends*/
