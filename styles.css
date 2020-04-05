@@ -1,24 +1,122 @@
-body {
-    all: unset;
-    font-family: 'Lato', sans-serif;
+/*
+    blue-dark #204051
+    blue-lighter #3b6978
+    blue-more-lighter #84a9ac
+    blue-light #cae8d5
+*/
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/*navbar css begins*/
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
 
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(202, 232, 213, 0.8),
+        rgba(32, 64, 81, 0.8)),
+        url(./images/background.jpg);
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+}
+
+.profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile-title {
+    color: white;
+    text-transform: uppercase;
+}
+
+.profile-title-welcome {
+    display: block;
+    font-size: 50px;
+    letter-spacing: 20px;
+    font-weight: 400;
+}
+
+.profile-title-name {
+    font-size: 30px;
+    display: block;
+    letter-spacing: 10px;
+    font-weight: 700;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: space-around;
+}
+
+.my-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*navbar css begins*/
+/* 
 .navbar {
     height: 60px;
     position: absolute;
     background-color: white;
     position: sticky;
     top: 0;
-}
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 
+                0 1px 1px 0 rgba(0,0,0,.14), 
+                0 1px 3px 0 rgba(0,0,0,.12);
+} */
 
 /*navbar css ends*/
 
 /*profile css begins*/
 
-.profile {
+/* .profile {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,9 +129,17 @@ body {
     height: 250px;
     width: 250px;
     border-radius: 50%;
-}
+} */
 
 /*profile css ends*/
+
+/*skills css begins*/
+
+.skills {
+    height: 100vh;
+}
+
+/*skills css ends*/
 
 /*footer css begins*/
 
