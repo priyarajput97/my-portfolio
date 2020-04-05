@@ -28,38 +28,37 @@ body {
     background-position: top;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-    position: relative;
 }
 
 .profile {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
 }
 
 .profile-title {
     color: white;
     text-transform: uppercase;
+    backface-visibility: hidden;
 }
 
 .profile-title-welcome {
     display: block;
     font-size: 50px;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
     font-weight: 400;
+    animation: moveInLeft 1s ease-out;
+    animation-delay: 0.5s;
 }
 
 .profile-title-name {
     font-size: 30px;
     display: block;
-    letter-spacing: 10px;
+    letter-spacing: 6px;
     font-weight: 700;
-}
-
-.profile-image {
-    display: flex;
-    justify-content: space-around;
+    animation: moveInRight 1s ease-out;
+    animation-delay: 0.5s;
 }
 
 .my-image {
@@ -68,6 +67,37 @@ body {
     border-radius: 50%;
 }
 
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
 
