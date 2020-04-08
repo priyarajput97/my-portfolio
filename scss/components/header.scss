@@ -1,0 +1,50 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-blue-light, 0.8),
+        rgba($color-blue-navy, 0.8)),
+        url(./images/background.jpg);
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+
+    &-image {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    &-title {
+        color: $color-white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        
+        &-welcome {
+            display: block;
+            font-size: 50px;
+            letter-spacing: 15px;
+            font-weight: 400;
+            animation: moveInLeft 1s ease-out;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+        }
+        
+        &-name {
+            font-size: 30px;
+            display: block;
+            letter-spacing: 6px;
+            font-weight: 400;
+            animation: moveInRight 1s ease-out;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
