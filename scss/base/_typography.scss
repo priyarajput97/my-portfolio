@@ -1,6 +1,28 @@
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 62.5%;
     line-height: 1.7;
+}
+
+.heading-secondary {
+    font-size: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $color-blue-light, $color-blue-navy);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 6px;
+}
+
+.heading-tertiary {
+    font-size: 20px;
+    color: $color-blue-dark;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 15px;
+    color: $color-blue;
 }

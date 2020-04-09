@@ -1,0 +1,52 @@
+.section-about {
+    background-color: $color-light-gray;
+    margin-top: -15vh;
+    padding: 30vh 5vh;
+}
+
+.section-skills {
+    margin-top: -15vh;
+    padding: 10vh 0;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-blue-light, 0.8),
+        rgba($color-blue-navy, 0.8)),
+        url(./images/everyone-can-code.jpg);
+    background-position: top;
+    background-size: cover;
+    transform: skewY(-5deg);
+
+    & > * {
+        transform: skewY(5deg);
+    }
+}
+
+.skills-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .skill-box {
+        padding: 20px;
+        margin: 20px;
+        flex: 150px 0 0;
+        background-color: rgba($color-light, 0.8);
+        text-align: center;
+        border-radius: 5px;
+        transition: all 0.4s ease;
+        
+        .skill-logo {
+            width: 100px;
+            height: 100px;
+            min-width: 100px;
+            min-height: 100px;
+        }
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: $box-shadow;
+        }
+    }
+}
