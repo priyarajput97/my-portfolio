@@ -1,0 +1,49 @@
+.footer {
+    height: 50vh;
+    // background-color: $color-blue-navy;
+    background-image: linear-gradient(to bottom right, $color-blue, $color-blue-navy);
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    &-element {
+        display: flex;
+        align-items: center;
+
+        &  > i {
+            min-width: 20px;
+            margin-right: 15px;
+        }
+    }
+
+    .divider {
+        height: 50px;
+        border-left: 1px solid rgba($color-white, 0.3); 
+    }
+
+    .connects{
+        text-align: center;
+        margin-top: 10px;
+
+        & > a {
+            &:visited,
+            &:link {
+                color: $color-white;
+                margin: 5px;
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                color: $color-blue;
+
+                & > i {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}

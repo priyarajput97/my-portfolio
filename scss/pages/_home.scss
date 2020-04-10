@@ -35,7 +35,7 @@
         background-color: rgba($color-light, 0.8);
         text-align: center;
         border-radius: 5px;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease;
         
         .skill-logo {
             width: 100px;
@@ -54,7 +54,7 @@
 .section-projects {
     background-color: $color-light-gray;
     margin-top: -15vh;
-    padding-top: 30vh;
+    padding: 30vh 0 10vh 0;
 
     .projects-container {
         max-width: 1200px;

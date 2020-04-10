@@ -8,7 +8,7 @@
 @import 'components/button';
 @import 'components/card';
 
-@import 'components/header.scss';
-@import 'components/footer.scss';
+@import 'layouts/header';
+@import 'layouts/footer';
 
-@import 'pages/home'
+@import 'pages/home';
