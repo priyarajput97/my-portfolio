@@ -62,10 +62,8 @@ body {
 
 .btn:link, .btn:visited {
   font-size: 15px;
-  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #3b6978;
   padding: 10px 20px;
   border-radius: 100px;
   transition: all 0.4s ease; }
@@ -77,6 +75,84 @@ body {
 .btn:active {
   transform: translateY(-2px);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8); }
+
+.btn-blue {
+  color: #fff;
+  background-color: #3b6978; }
+
+.btn-white {
+  color: #204051;
+  background-color: #fff; }
+
+.card {
+  perspective: 1500px;
+  -webkit-perspective: 1500px;
+  position: relative;
+  height: 500px; }
+  .card-side {
+    height: 500px;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    overflow: hidden; }
+    .card-side-front {
+      background-color: #fff; }
+    .card-side-back {
+      transform: rotateY(180deg);
+      padding: 20px;
+      color: #fff;
+      font-size: 22px; }
+      .card-side-back-1 {
+        background-image: linear-gradient(to bottom right, #ffeed0, #ff6464); }
+      .card-side-back-2 {
+        background-image: linear-gradient(to bottom right, #c6e377, #36622b); }
+      .card-side-back-3 {
+        background-image: linear-gradient(to bottom right, #fce2db, #e4a3d4); }
+  .card-image {
+    background-position: top;
+    background-size: cover;
+    height: 200px;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card-image-1 {
+      background-image: linear-gradient(to bottom right, #ffeed0, #ff6464), url(./images/everyone-can-code.jpg); }
+    .card-image-2 {
+      background-image: linear-gradient(to bottom right, #c6e377, #36622b), url(./images/background.jpg); }
+    .card-image-3 {
+      background-image: linear-gradient(to bottom right, #fce2db, #e4a3d4), url(./images/everyone-can-code.jpg); }
+  .card-heading {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 5px;
+    text-align: right; }
+    .card-heading-1 {
+      background-image: linear-gradient(to bottom right, #ffeed0, #ff6464); }
+    .card-heading-2 {
+      background-image: linear-gradient(to bottom right, #c6e377, #36622b); }
+    .card-heading-3 {
+      background-image: linear-gradient(to bottom right, #fce2db, #e4a3d4); }
+  .card-info {
+    padding: 20px;
+    font-size: 20px; }
+    .card-info-1 {
+      color: #ff6464; }
+    .card-info-2 {
+      color: #36622b; }
+    .card-info-3 {
+      color: #e4a3d4; }
+  .card:hover .card-side-front {
+    transform: rotateY(-180deg); }
+  .card:hover .card-side-back {
+    transform: rotateY(0deg); }
 
 .header {
   height: 95vh;
@@ -154,3 +230,17 @@ body {
     .skills-container .skill-box:hover {
       transform: translateY(-8px);
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8); }
+
+.section-projects {
+  background-color: #f9f9f9;
+  margin-top: -15vh;
+  padding-top: 30vh; }
+  .section-projects .projects-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .section-projects .projects-container .project {
+      flex: 350px 0 0;
+      margin: 20px; }

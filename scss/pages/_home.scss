@@ -50,3 +50,22 @@
         }
     }
 }
+
+.section-projects {
+    background-color: $color-light-gray;
+    margin-top: -15vh;
+    padding-top: 30vh;
+
+    .projects-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .project {
+            flex: 350px 0 0;
+            margin: 20px;
+        }
+    }
+}

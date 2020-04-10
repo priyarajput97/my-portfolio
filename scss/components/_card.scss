@@ -1,0 +1,113 @@
+.card {
+    perspective: 1500px;
+    -webkit-perspective: 1500px;
+    position: relative;
+    height: 500px;
+
+    &-side {
+        height: 500px;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        box-shadow: $box-shadow-sm;
+        border-radius: 5px;
+        overflow: hidden;
+        
+        &-front {
+            background-color: $color-white;
+        }
+        
+        &-back {
+            transform: rotateY(180deg);
+            padding: 20px;
+            color: $color-white;
+            font-size: 22px;
+
+            &-1 {
+                background-image: linear-gradient(to bottom right, $color-peach-light, $color-peach-dark);
+            }
+    
+            &-2 {
+                background-image: linear-gradient(to bottom right, $color-green-light, $color-green-dark);
+            }
+    
+            &-3 {
+                background-image: linear-gradient(to bottom right, $color-pink-light, $color-pink-dark);
+            }
+        }
+    }
+
+    &-image {
+        background-position: top;
+        background-size: cover;
+        height: 200px;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &-1 {
+            background-image: linear-gradient(to bottom right, $color-peach-light, $color-peach-dark),
+            url(./images/everyone-can-code.jpg);
+        }
+
+        &-2 {
+            background-image: linear-gradient(to bottom right, $color-green-light, $color-green-dark),
+            url(./images/background.jpg);
+        }
+
+        &-3 {
+            background-image: linear-gradient(to bottom right, $color-pink-light, $color-pink-dark),
+            url(./images/everyone-can-code.jpg);
+        }
+    }
+
+    &-heading {
+        position: absolute;
+        top: 150px;
+        right: 20px;
+        color: $color-white;
+        font-size: 25px;
+        text-transform: uppercase;
+        padding: 5px;
+        text-align: right;
+
+        &-1 {
+            background-image: linear-gradient(to bottom right, $color-peach-light, $color-peach-dark);
+        }
+
+        &-2 {
+            background-image: linear-gradient(to bottom right, $color-green-light, $color-green-dark);
+        }
+
+        &-3 {
+            background-image: linear-gradient(to bottom right, $color-pink-light, $color-pink-dark);
+        }
+    }
+
+    &-info {
+        padding: 20px;
+        font-size: 20px;
+
+        &-1 {
+            color: $color-peach-dark;
+        }
+
+        &-2 {
+            color: $color-green-dark;
+        }
+
+        &-3 {
+            color: $color-pink-dark;
+        }
+    }
+
+    &:hover &-side-front {
+        transform: rotateY(-180deg);
+    } 
+    
+    &:hover &-side-back {
+        transform: rotateY(0deg);
+    }
+}
