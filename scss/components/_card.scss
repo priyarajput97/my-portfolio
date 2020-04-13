@@ -25,18 +25,7 @@
             padding: 20px;
             color: $color-white;
             font-size: 22px;
-
-            &-1 {
-                background-image: linear-gradient(to bottom right, $color-peach-light, $color-peach-dark);
-            }
-    
-            &-2 {
-                background-image: linear-gradient(to bottom right, $color-green-light, $color-green-dark);
-            }
-    
-            &-3 {
-                background-image: linear-gradient(to bottom right, $color-pink-light, $color-pink-dark);
-            }
+            background-image: linear-gradient(to bottom right, $color-blue-light, $color-blue-navy);
         }
     }
 
@@ -46,21 +35,8 @@
         height: 200px;
         background-blend-mode: screen;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-
-        &-1 {
-            background-image: linear-gradient(to bottom right, $color-peach-light, $color-peach-dark),
-            url(./images/everyone-can-code.jpg);
-        }
-
-        &-2 {
-            background-image: linear-gradient(to bottom right, $color-green-light, $color-green-dark),
-            url(./images/background.jpg);
-        }
-
-        &-3 {
-            background-image: linear-gradient(to bottom right, $color-pink-light, $color-pink-dark),
-            url(./images/everyone-can-code.jpg);
-        }
+        background-image: linear-gradient(to bottom right, $color-blue-light, $color-blue-navy),
+        url(./images/everyone-can-code.jpg);
     }
 
     &-heading {
@@ -72,35 +48,13 @@
         text-transform: uppercase;
         padding: 5px;
         text-align: right;
-
-        &-1 {
-            background-image: linear-gradient(to bottom right, $color-peach-light, $color-peach-dark);
-        }
-
-        &-2 {
-            background-image: linear-gradient(to bottom right, $color-green-light, $color-green-dark);
-        }
-
-        &-3 {
-            background-image: linear-gradient(to bottom right, $color-pink-light, $color-pink-dark);
-        }
+        background-image: linear-gradient(to bottom right, $color-blue-light, $color-blue-navy);
     }
 
     &-info {
         padding: 20px;
         font-size: 20px;
-
-        &-1 {
-            color: $color-peach-dark;
-        }
-
-        &-2 {
-            color: $color-green-dark;
-        }
-
-        &-3 {
-            color: $color-pink-dark;
-        }
+        color: $color-blue-navy;
     }
 
     &:hover &-side-front {

@@ -106,25 +106,15 @@ body {
       transform: rotateY(180deg);
       padding: 20px;
       color: #fff;
-      font-size: 22px; }
-      .card-side-back-1 {
-        background-image: linear-gradient(to bottom right, #ffeed0, #ff6464); }
-      .card-side-back-2 {
-        background-image: linear-gradient(to bottom right, #c6e377, #36622b); }
-      .card-side-back-3 {
-        background-image: linear-gradient(to bottom right, #fce2db, #e4a3d4); }
+      font-size: 22px;
+      background-image: linear-gradient(to bottom right, #cae8d5, #204051); }
   .card-image {
     background-position: top;
     background-size: cover;
     height: 200px;
     background-blend-mode: screen;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
-    .card-image-1 {
-      background-image: linear-gradient(to bottom right, #ffeed0, #ff6464), url(./images/everyone-can-code.jpg); }
-    .card-image-2 {
-      background-image: linear-gradient(to bottom right, #c6e377, #36622b), url(./images/background.jpg); }
-    .card-image-3 {
-      background-image: linear-gradient(to bottom right, #fce2db, #e4a3d4), url(./images/everyone-can-code.jpg); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-image: linear-gradient(to bottom right, #cae8d5, #204051), url(./images/everyone-can-code.jpg); }
   .card-heading {
     position: absolute;
     top: 150px;
@@ -133,22 +123,12 @@ body {
     font-size: 25px;
     text-transform: uppercase;
     padding: 5px;
-    text-align: right; }
-    .card-heading-1 {
-      background-image: linear-gradient(to bottom right, #ffeed0, #ff6464); }
-    .card-heading-2 {
-      background-image: linear-gradient(to bottom right, #c6e377, #36622b); }
-    .card-heading-3 {
-      background-image: linear-gradient(to bottom right, #fce2db, #e4a3d4); }
+    text-align: right;
+    background-image: linear-gradient(to bottom right, #cae8d5, #204051); }
   .card-info {
     padding: 20px;
-    font-size: 20px; }
-    .card-info-1 {
-      color: #ff6464; }
-    .card-info-2 {
-      color: #36622b; }
-    .card-info-3 {
-      color: #e4a3d4; }
+    font-size: 20px;
+    color: #204051; }
   .card:hover .card-side-front {
     transform: rotateY(-180deg); }
   .card:hover .card-side-back {
@@ -221,6 +201,116 @@ body {
       color: #84a9ac; }
       .footer .connects > a:hover > i {
         transform: translateY(-2px); }
+
+.navigation-checkbox {
+  display: none; }
+
+.navigation-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 2000;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  line-height: 55px;
+  cursor: pointer; }
+
+.navigation-background {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 45px;
+  right: 45px;
+  z-index: 1000;
+  background-image: radial-gradient(#cae8d5, #204051);
+  transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); }
+
+.navigation-nav {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+
+.navigation-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none; }
+
+.navigation-item {
+  text-align: center;
+  margin: 10px; }
+
+.navigation-link:visited, .navigation-link:link {
+  display: inline-block;
+  padding: 5px 15px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 230%;
+  transition: all .4s ease; }
+  .navigation-link:visited span, .navigation-link:link span {
+    display: inline-block;
+    margin-right: 15px; }
+
+.navigation-link:hover, .navigation-link:active {
+  background-position: 100%;
+  color: #84a9ac;
+  transform: translateX(10px); }
+
+.navigation-checkbox:checked ~ .navigation-background {
+  transform: scale(60); }
+
+.navigation-checkbox:checked ~ .navigation-nav {
+  width: 100%;
+  opacity: 1; }
+
+.navigation-icon {
+  position: relative; }
+  .navigation-icon, .navigation-icon::after, .navigation-icon::before {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: #204051; }
+  .navigation-icon::after, .navigation-icon::before {
+    content: "";
+    left: 0;
+    position: absolute;
+    transition: all .2s ease-in; }
+  .navigation-icon::before {
+    top: -8px; }
+  .navigation-icon::after {
+    top: 8px; }
+
+.navigation-toggle:hover .navigation-icon::before {
+  top: -10px; }
+
+.navigation-toggle:hover .navigation-icon::after {
+  top: 10px; }
+
+.navigation-checkbox:checked + .navigation-toggle .navigation-icon {
+  background-color: transparent; }
+
+.navigation-checkbox:checked + .navigation-toggle .navigation-icon::after {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation-checkbox:checked + .navigation-toggle .navigation-icon::before {
+  top: 0;
+  transform: rotate(-135deg); }
 
 .section-about {
   background-color: #f9f9f9;
